@@ -17,8 +17,15 @@ jobs:
       - run:
          name: installing Dependencies
          command: npm install
+  build:
+    docker:
+      - image: cimg/node:14.17.3
+    steps:
+      - checkout
+      - run:
+         name: installing Dependencies
+         command: npm install
       - run:
          name: build
          command: npm run build
-         
 
