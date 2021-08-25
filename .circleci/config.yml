@@ -5,7 +5,9 @@ workflows:
   Deploying Tic Tac:
      jobs: 
       - test
-
+      - build:
+          requires:
+            - test
 jobs:
   test:
     docker:
@@ -15,5 +17,8 @@ jobs:
       - run:
          name: installing Dependencies
          command: npm install
-      
+      - run:
+         name: build
+         command: npm run build
+         
 
