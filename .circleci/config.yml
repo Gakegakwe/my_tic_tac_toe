@@ -1,5 +1,11 @@
 version: 2.1
 
+workflows:
+  version: 2
+  Deploying Tic Tac:
+     jobs: 
+      - test
+
 jobs:
   test:
     docker:
