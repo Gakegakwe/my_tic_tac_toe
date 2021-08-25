@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:14.17.3
+    steps:
+      - checkout
+      - run:
+         name: installing Dependencies
+         command: npm install
+      
+
